@@ -1,0 +1,51 @@
+body {
+    color: white;
+
+      background: linear-gradient(45deg, #2f0086, #ff0000);
+  background-size: 400% 400%;
+  
+  
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.conteudo { 
+  text-align: center;
+  padding-top: 450px;
+}
+
+
+
+.tela-home h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.tela-home p { color: #9ca3af; margin-bottom: 30px; }
+
+.btn-entrar {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #9e0000;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 16, 107, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: #e20000;
+    transform: scale(1.30);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+

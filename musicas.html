@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tame Impala - Músicas</title>
+    <link rel="stylesheet" href="musicas_style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="vinil-loader"></div>
+            <p class="loading-text">Sintonizando as Frequências...</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="menu-container">
+            <details>
+                <summary>Musicas</summary>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="musicas.html">Músicas</a></li>
+                    <li><a href="albuns.html">Álbuns</a></li>
+                </ul>
+            </details>
+        </div>
+    </header>
+
+    <div class="Text_neon">
+        <h1>As Músicas</h1>
+    </div>
+
+    <main class="musicas-container" id="tracks">
+        
+        <div class="music-card">
+            <div class="vinil-disco-mini">
+                <img src="image/vinil_img.webp" alt="Disco">
+            </div>
+            <div class="music-info">
+                <h2>The Less I Know The Better</h2>
+                <span class="album-tag">Álbum: Currents (2015)</span>
+                <p>Com uma das linhas de baixo mais icônicas da década, a faixa mistura perfeitamente o indie pop com o dance-rock psicodélico, tornando-se o maior sucesso comercial do projeto de Kevin Parker.</p>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="vinil-disco-mini">
+                <img src="image/vinil_img_2.webp" alt="Disco">
+            </div>
+            <div class="music-info">
+                <h2>Let It Happen</h2>
+                <span class="album-tag">Álbum: Currents (2015)</span>
+                <p>Uma jornada de quase 8 minutos que simula um "defeito" de CD arranhado no meio da música. Uma obra-prima sobre perder o controle e deixar as coisas acontecerem.</p>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="vinil-disco-mini">
+                <img src="image/vinil_img_3.webp" alt="Disco">
+            </div>
+            <div class="music-info">
+                <h2>Borderline</h2>
+                <span class="album-tag">Álbum: The Slow Rush (2020)</span>
+                <p>Embalada por sintetizadores nostálgicos e uma batida groove flutuante, a música explora as ansiedades de Kevin Parker enquanto caminhava pelas ruas de Los Angeles.</p>
+            </div>
+        </div>
+
+        <div class="music-card">
+            <div class="vinil-disco-mini">
+                <img src="image/vinil_img_4.webp" alt="Disco">
+            </div>
+            <div class="music-info">
+                <h2>Feels Like We Only Go Backwards</h2>
+                <span class="album-tag">Álbum: Lonerism (2012)</span>
+                <p>Puro rock psicodélico clássico dos anos 60 repaginado. O videoclipe feito em animação de massinha de modelar reflete perfeitamente a sensação hipnótica desta faixa.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loading-screen');
+            if (loader) {
+                loader.classList.add('fade-out');
+            }
+        });
+    </script>
+</body>
+</html>

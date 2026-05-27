@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  background: linear-gradient(-45deg, #3a3a3a, #ff0000, #0a036b);
+  background-size: 400% 400%;
+
+  animation: gradientAnimation 15s ease infinite;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.menu-container {
+    background-color: rgb(88, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: inline-block;
+    margin: 20px 0 0 20px;
+}
+
+details {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+details summary {
+    padding: 12px;
+    font-weight: bold;
+    background-color: #a7a7a7;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    list-style: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 8px; 
+    white-space: nowrap;
+}
+
+details summary::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+details summary:hover {
+    background-color: #cf0000;
+    color: white;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;      
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.4s ease, opacity 0.3s ease;
+}
+
+details[open] ul {
+    max-width: 500px;
+    opacity: 1;
+    padding-left: 10px;
+}
+
+details ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+
+details ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.Text_neon {
+  font-size: 40px;
+  text-transform: uppercase;
+
+  animation: pulsar 1.5s infinite alternate ease-in-out;
+}
+
+.Vinil_giratorio img {
+  width: 500px;
+  height: auto;
+  border-radius: 50%;
+
+  animation: girarVinil 4s linear infinite;
+}
+
+.Caixa_texto {
+  border: 2px solid #fcfdff;
+  border-radius: 0px;
+  padding: 20px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  color: #fafafa;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+
+  background: linear-gradient(-45deg, #ff2323, #000000,#1e018a);
+  background-size: 800% 800%;
+
+  animation: caixaFundoAnimado 15s ease infinite;
+}
+
+.Botao {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.Imagem_topo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+  animation: flutuar 4s ease-in-out infinite;
+}
+
+.Topo {
+  background-color: #012a58;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.menu-container {
+
+  padding: 5px;
+  display: inline-block; 
+}
+
+
+details {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+}
+
+
+details summary {
+  padding: 12px 20px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  list-style: none;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 8px; 
+  white-space: nowrap; 
+}
+
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+details summary::after {
+  content: '▶';
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+
+details summary:hover {
+  background-color: #cf0000;
+  color: white; 
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+
+details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;       
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  
+
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.4s ease, opacity 0.3s ease;
+}
+
+
+details[open] ul {
+  max-width: 600px; 
+  opacity: 1;
+  padding-left: 15px; 
+}
+
+details ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff; 
+  text-decoration: none;
+  white-space: nowrap; 
+  transition: background 0.2s, color 0.2s;
+  border-radius: 4px;
+}
+
+
+details ul li a:hover {
+  background-color: #f5f5f5;
+  color: #333;
+} 
+
+.carrossel-container {
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin: 40px auto;
+}
+
+.carrossel-trilha {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: rolar 10s infinite ease-in-out alternate;
+}
+
+.slide {
+  width: 900px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes caixaFundoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes girarVinil {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulsar {
+  0% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #ff00de,
+      0 0 20px #ff00de;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 30px #ff00de,
+      0 0 50px #ff00de;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+
+@keyframes rolar {
+  0%, 15% { transform: translateX(0); }
+  15%, 15% { transform: translateX(-100%); }
+  30%, 30% { transform: translateX(-200%); }
+  30%, 45% { transform: translateX(-200%); }
+  45%, 45% { transform: translateX(-300%); }
+}
+

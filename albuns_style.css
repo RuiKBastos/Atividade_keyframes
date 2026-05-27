@@ -1,0 +1,234 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden; 
+    background: linear-gradient(-45deg, #050510, #ff0055, #240046, #0a036b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: Arial, sans-serif;
+}
+
+h1, h3 {
+    color: white;
+}
+
+.vinil-fantasma {
+    position: fixed;
+    top: 40%;
+    left: -200px; 
+    width: 180px;
+    height: 180px;
+    z-index: 1;
+    opacity: 0.25; 
+    pointer-events: none; 
+}
+
+.vinil-fantasma img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: moverHorizontal 12s linear infinite, girarVinil 4s linear infinite;
+}
+
+
+@keyframes moverHorizontal {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 105vw; 
+    }
+}
+
+
+.menu-container {
+    background-color: rgb(88, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    display: inline-block;
+    margin: 20px 0 0 20px;
+    position: relative;
+    z-index: 10; 
+}
+
+details {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+
+details summary {
+    padding: 12px;
+    font-weight: bold;
+    background-color: #a7a7a7;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    list-style: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 8px; 
+    white-space: nowrap;
+}
+
+details summary::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+details summary:hover {
+    background-color: #cf0000;
+    color: white;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;      
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.4s ease, opacity 0.3s ease;
+}
+
+details[open] ul {
+    max-width: 500px;
+    opacity: 1;
+    padding-left: 10px;
+}
+
+details ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+    border-radius: 4px;
+}
+
+details ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- TEXTO NEON --- */
+.Text_neon {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 40px 0;
+    position: relative;
+    z-index: 5;
+    animation: pulsar 1.5s infinite alternate ease-in-out;
+}
+
+
+.albuns-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    position: relative;
+    z-index: 5; 
+}
+
+.album-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff0055;
+    box-shadow: 0 15px 35px rgba(255, 0, 85, 0.3);
+}
+
+.capa-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #111;
+}
+
+.capa-arte {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.album-card:hover .capa-arte {
+    transform: scale(1.05) rotate(2deg); 
+}
+
+.album-detalhes h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.ano-tag {
+    display: inline-block;
+    color: #ff0055;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.album-detalhes p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+
+/* --- ANIMAÇÕES PADRÃO --- */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes girarVinil {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulsar {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff0055, 0 0 20px #ff0055; }
+    100% { text-shadow: 0 0 10px #fff, 0 0 30px #240046, 0 0 50px #240046; }
+}
+
+@keyframes pulsarTexto {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; text-shadow: 0 0 10px #ff0055; }
+}
